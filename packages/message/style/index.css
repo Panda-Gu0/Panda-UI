@@ -1,0 +1,64 @@
+.pd-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  z-index: 50;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px #00000014, 0 3px 6px -4px #0000001f, 0 9px 28px 8px #0000000d;
+  display: flex;
+  align-items: center;
+  padding: 15px 15px 15px 20px;
+  overflow: hidden;
+  background-color: #f0f9eb;
+  border: 1px solid #ebeef5;
+  border-radius: 5px;
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+  transform: translateX(-50%);
+}
+.pd-message .close-button {
+  cursor: pointer;
+}
+.message-fade-enter-active,
+.message-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
+.pd-message-content {
+  color: #67c23a;
+  font-size: 14px;
+  margin: 0;
+}
+.pd-icon {
+  margin-right: 2px;
+}
+.pd-icon .icon {
+  font-size: 18px;
+}
+.pd-message-info {
+  background-color: #f4f4f5 !important;
+  border: 1px solid #ebeef5 !important;
+}
+.pd-message-info .pd-message-content {
+  color: #a6a8ad !important;
+}
+.pd-message-success {
+  background-color: #f0f9eb !important;
+  border: 1px solid #ebeef5 !important;
+}
+.pd-message-success .pd-message-content {
+  color: #67c23a !important;
+}
+.pd-message-warning {
+  background-color: #fdf6ec !important;
+  border: 1px solid #ebeef5 !important;
+}
+.pd-message-warning .pd-message-content {
+  color: #e6a23c !important;
+}
+.pd-message-error {
+  background-color: #fef0f0 !important;
+  border: 1px solid #ebeef5 !important;
+}
+.pd-message-error .pd-message-content {
+  color: #f67d7d !important;
+}

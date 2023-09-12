@@ -1,0 +1,37 @@
+@prefix: pd;
+
+.@{prefix}-backtop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+  border: 0.5px solid rgba(204, 204, 204, 0.356);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+  overflow: hidden;
+  &:hover {
+    background: #f2f6fc;
+  }
+}
+.@{prefix}-icon {
+  .icon {
+    font-size: 23px;
+  }
+}
+// 过渡动画
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
