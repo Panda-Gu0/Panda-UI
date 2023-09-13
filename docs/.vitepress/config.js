@@ -13,7 +13,7 @@ export default {
       { text: "组件", link: "/components/button/" },
     ],
     socialLinks: [
-      { icon: "github", link: "https://github.com/Panda-Gu0/PandaUI" },
+      { icon: "github", link: "https://github.com/Panda-Gu0/Panda-UI" },
     ],
     sidebar: {
       "/guild/": [
@@ -71,11 +71,28 @@ export default {
           ],
         },
         {
+          text: "提示",
+          items: [
+            {
+              text: "Message 消息提示",
+              link: "/components/message/",
+            },
+            {
+              text: "Dialog 对话框",
+              link: "/components/dialog/",
+            }
+          ],
+        },
+        {
           text: "其他",
           items: [
             {
               text: "WaterMark 水印",
               link: "/components/watermark/",
+            },
+            {
+              text: "Backtop 返回顶部",
+              link: "/components/backtop/",
             }
           ],
         },

@@ -8,6 +8,7 @@ import pdSpace from "./space/index";
 import pdRadio from "./radio/index";
 import pdBacktop from "./backtop/index";
 import pdMessage from "./message/message";
+import pdDialog from "./dialog/index";
 import { App } from "vue";
 const install = (app: App) => {
   app.use(pdButton);
@@ -19,6 +20,7 @@ const install = (app: App) => {
   app.use(pdSpace);
   app.use(pdRadio);
   app.use(pdBacktop);
+  app.use(pdDialog);
   app.config.globalProperties.message = pdMessage; 
 };
 const PandaUI = {
@@ -34,6 +36,7 @@ export {
   pdSpace,
   pdRadio,
   pdBacktop,
-  pdMessage
+  pdDialog,
+  pdMessage,
 };
 export default PandaUI;

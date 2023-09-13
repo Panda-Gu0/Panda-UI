@@ -1,7 +1,7 @@
 {
   "name": "ppanda-ui",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./dist/ppanda-ui.umd.cjs",
   "module": "./dist/ppanda-ui.js",
   "exports": {
@@ -32,6 +32,6 @@
     "vue-tsc": "^1.8.5"
   },
   "dependencies": {
-    "ppanda-ui": "^0.0.5"
+    "ppanda-ui": "^0.0.6"
   }
 }

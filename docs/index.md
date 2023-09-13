@@ -17,7 +17,7 @@ hero:
       link: /guild/installation/
     - theme: alt
       text: 在 Github 上查看
-      link: https://github.com/Panda-Gu0/PandaUI
+      link: https://github.com/Panda-Gu0/Panda-UI
 
 features:
   - icon: <img src="/PandaUIDoc/vue.png" alt="vue">

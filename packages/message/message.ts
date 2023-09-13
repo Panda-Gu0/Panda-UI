@@ -1,16 +1,9 @@
 import element from "./index.vue";
 import { VNode, createVNode, render } from "vue";
-
+// 约束消息选项类型
 interface messageOptions {
   message: string;
-  type?: {
-    type: "success" | "info" | "warning" | "error";
-    default: "info";
-  };
-  duration?: {
-    type: number;
-    default: 3000;
-  };
+  type?: string;
   showClose?: {
     type: boolean;
     default: false;
@@ -20,7 +13,10 @@ interface messageOptions {
     default: 20;
   };
   onClose?: () => void;
+  iconShow?: boolean;
+  turnOff?: boolean;
 }
+// 组件实例数组
 const instances: VNode[] = [];
 
 export default function message(options: messageOptions) {
@@ -33,7 +29,7 @@ export default function message(options: messageOptions) {
   let offset = options.offset || 20;
 
   instances.forEach((vnode: VNode) => {
-    offset += vnode.el!.offsetHeight + 20;
+    offset += vnode.el!.offsetHeight + 20; // 累计已存在消息组件的高度
   });
 
   const params = {
@@ -44,9 +40,9 @@ export default function message(options: messageOptions) {
   const vnode = createVNode(element, params);
   vnode.props!.onDestroy = () => {
     render(null, div); // render会移除dom，注意：此方法在vue2中无法使用
-    instances.pop();
+    instances.pop(); // 从实例数组中移除
   };
   render(vnode, div);
   document.body.appendChild(div.firstElementChild!);
-  instances.push(vnode);
+  instances.push(vnode); // 添加组件实例到实例数组
 }

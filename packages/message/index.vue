@@ -30,7 +30,7 @@ export default {
 <script setup lang="ts">
 import "./style/index.less";
 import pdIcon from "../icon/index.vue";
-import { computed, onMounted, onUnmounted, ref, Ref } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 
 const props = defineProps({
   message: {
@@ -41,7 +41,7 @@ const props = defineProps({
   type: {
     // 消息提示类型
     type: String,
-    default: "",
+    default: "info",
   },
   duration: {
     // 动画持续时间
@@ -58,10 +58,10 @@ const props = defineProps({
     default: true,
   },
   turnOff: {
-      // 是否可手动关闭
-      type: Boolean,
-      default: false
-  }
+    // 是否可手动关闭
+    type: Boolean,
+    default: false,
+  },
 });
 const visible = ref(false);
 let timer: NodeJS.Timeout | null = null;

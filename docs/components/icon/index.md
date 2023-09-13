@@ -2,7 +2,7 @@
 
 PandaUI提供了一套日常开发过程中常用的图标集合。
 
-## 使用方法
+## 基础用法
 
 通过 pd-icon 中设置 name 属性指定具体图标名称即可。
 
@@ -24,7 +24,8 @@ PandaUI提供了一套日常开发过程中常用的图标集合。
 
 :::
 
-## 所有图标
+## 图标集合
+
 <div class="icon-container">
 <div class="all-icon">
     <div class= "icon-item">
@@ -171,6 +172,51 @@ PandaUI提供了一套日常开发过程中常用的图标集合。
         <pd-icon name="zhifu"></pd-icon>
         <span>zhifu</span>
     </div>
-    
+    <div class= "icon-item">
+        <pd-icon name="cuo"></pd-icon>
+        <span>cuo</span>
+    </div>
+    <div class= "icon-item">
+        <pd-icon name="warning"></pd-icon>
+        <span>warning</span>
+    </div>
+    <div class= "icon-item">
+        <pd-icon name="info"></pd-icon>
+        <span>info</span>
+    </div>
+    <div class= "icon-item">
+        <pd-icon name="dui"></pd-icon>
+        <span>dui</span>
+    </div>   
 </div>
 </div>
+
+## 徽标提示
+
+徽标提示通常用于展示新消息数量、未读消息数量、红点提醒等功能，帮助用户快速发现和识别关键信息。
+
+<div class="icon-container">
+<div class="all-icon">
+<div class="icon-item">
+<pd-icon name="gouwu" dot></pd-icon>
+</div>
+<div class="icon-item">
+<pd-icon name="gouwu" dot badge="1"></pd-icon>
+</div>
+<div class="icon-item">
+<pd-icon name="gouwu" dot badge="1000"></pd-icon>
+</div>
+</div>
+</div>
+
+::: details 展开代码
+
+```html
+<template>
+  <pd-icon name="gouwu" dot></pd-icon>
+  <pd-icon name="gouwu" dot badge="1"></pd-icon>
+  <pd-icon name="gouwu" dot badge="1000"></pd-icon>
+</template>
+```
+
+:::

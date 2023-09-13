@@ -1,0 +1,50 @@
+.pd-dialog .dialog-cover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 0.3;
+  z-index: 999;
+}
+.pd-dialog .pd-dialog-warpper {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: #fff;
+  width: 500px;
+  min-height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.pd-dialog .pd-dialog-warpper .pd-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.pd-dialog .pd-dialog-warpper .pd-dialog-header .title {
+  font-size: 18px;
+  color: #303133;
+}
+.pd-dialog .pd-dialog-warpper .pd-dialog-header .close {
+  font-size: 18px;
+  cursor: pointer;
+}
+.pd-dialog .pd-dialog-warpper .pd-dialog-content {
+  padding: 10px 20px;
+  color: #606266;
+  font-size: 14px;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

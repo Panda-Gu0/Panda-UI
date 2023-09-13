@@ -35,13 +35,23 @@
   </pd-space>
   <pd-radio :options="options"></pd-radio>
   <pd-radio :options="options" :inline="false"></pd-radio>
-  <pd-radio :options="options2" filedLabel="name" filedValue="id" @change="change"></pd-radio>
+  <pd-radio
+    :options="options2"
+    filedLabel="name"
+    filedValue="id"
+    @change="change"
+  ></pd-radio>
   <pd-backtop></pd-backtop>
+  <pd-button @click="showDialog">显示弹窗</pd-button>
+  <pd-dialog title="牛逼" :visible="visible" @cancel="closeDialog">
+    这是一段自定义文字
+  </pd-dialog>
 </template>
 <script setup lang="ts">
 import { ref, reactive, Ref } from "vue";
-import { pdMessage } from "../packages/index"
+import { pdMessage } from "../packages/index";
 let text = ref("");
+let visible = ref(false);
 let status: Ref<any> = ref(true);
 let options = reactive([
   {
@@ -79,13 +89,19 @@ const options2 = reactive([
 ]);
 const change = (e: any) => {
   console.log(e);
- pdMessage({
-  message: "你说的对，这就是奎桑提，巴拉巴拉，啊啊啊啊啊！！",
-  type: "success",
-  iconShow: true,
-  turnOff: true
-});
-}
+  pdMessage({
+    message: "登录成功",
+    type: "success",
+    iconShow: true,
+    turnOff: true,
+  });
+};
+const showDialog = () => {
+  visible.value = true;
+};
+const closeDialog = () => {
+  visible.value = false;
+};
 </script>
 
 <style scoped></style>

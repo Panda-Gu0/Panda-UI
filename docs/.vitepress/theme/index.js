@@ -1,7 +1,6 @@
 import DefaultTheme from "vitepress/theme";
 import "../../../node_modules/ppanda-ui/dist/style.css";
 import "./style/theme.less";
-
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app }) => {
